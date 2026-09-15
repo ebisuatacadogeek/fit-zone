@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minha Conta | FIT ZONE</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<main class="auth-page">
+
+    <section class="auth-brand">
+
+        <a href="index.html" class="back-link">
+            ← VOLTAR PARA A LOJA
+        </a>
+
+        <div class="brand-content">
+
+            <div class="logo">
+                <span>FIT</span> ZONE
+            </div>
+
+            <p class="tag">
+                BEM-VINDO DE VOLTA
+            </p>
+
+            <h1>
+                ENTRE NA SUA<br>
+                <span>FIT ZONE.</span>
+            </h1>
+
+            <p class="description">
+                Acesse sua conta para acompanhar seus pedidos,
+                seus dados e sua experiência FIT ZONE.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="auth-form-area">
+
+        <div class="form-container">
+
+            <p class="form-tag">
+                MINHA CONTA
+            </p>
+
+            <h2>ENTRAR</h2>
+
+            <p class="form-subtitle">
+                Digite seus dados para acessar sua conta.
+            </p>
+
+
+            <form id="loginForm">
+
+                <div class="input-group">
+
+                    <label for="email">
+                        E-MAIL
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="seu@email.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="senha">
+                        SENHA
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Sua senha"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+
+                <div
+                    id="formMessage"
+                    class="form-message"
+                    aria-live="polite">
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                    id="submitButton">
+
+                    ENTRAR NA MINHA CONTA
+
+                </button>
+
+            </form>
+
+
+            <div class="register-link">
+
+                Ainda não possui uma conta?
+
+                <a href="cadastro.html">
+                    CRIAR CONTA
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"
+    defer>
+</script>
+
+<script src="login.js" defer></script>
+
+</body>
+</html>

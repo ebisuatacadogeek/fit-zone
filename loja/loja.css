@@ -1,0 +1,707 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap');
+
+:root {
+    --red: #ff1f2d;
+    --red-light: #ff4651;
+    --black: #060606;
+    --black-soft: #0c0c0e;
+    --graphite: #141416;
+    --white: #ffffff;
+    --off-white: #f4f4f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* HEADER */
+
+.store-header {
+    height: 88px;
+    width: 100%;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background: rgba(6, 6, 6, 0.88);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.store-logo {
+    font-family: "Oswald", sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.store-logo span {
+    color: var(--red);
+}
+
+.store-nav {
+    display: flex;
+    gap: 34px;
+}
+
+.store-nav a {
+    color: #aaaab0;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.store-nav a:hover,
+.store-nav a.active {
+    color: var(--white);
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.account-button,
+.cart-button {
+    min-height: 43px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.account-button {
+    border: 1px solid #343438;
+}
+
+.account-button:hover {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+.cart-button {
+    border: 0;
+    background: var(--red);
+    color: white;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.cart-button:hover {
+    background: var(--red-light);
+}
+
+.cart-button span {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    color: black;
+}
+
+/* HERO */
+
+.store-hero {
+    min-height: 100vh;
+    padding: 155px 6% 80px;
+
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 80% 50%, rgba(255,31,45,.15), transparent 29%),
+        linear-gradient(125deg, #060606, #0b0b0d 60%, #151518);
+}
+
+.store-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+}
+
+.eyebrow {
+    color: var(--red);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.store-hero h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(68px, 7.5vw, 120px);
+    line-height: .9;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.store-hero h1 span {
+    display: block;
+    color: var(--red);
+}
+
+.hero-text {
+    max-width: 570px;
+    color: #aaaab0;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 37px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.outline-button,
+.white-button {
+    min-height: 57px;
+    padding: 0 28px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.3px;
+
+    transition: .3s;
+}
+
+.primary-button {
+    background: var(--red);
+    color: white;
+}
+
+.primary-button:hover {
+    background: var(--red-light);
+    transform: translateY(-3px);
+}
+
+.outline-button {
+    border: 1px solid #37373c;
+    color: #d0d0d4;
+}
+
+.outline-button:hover {
+    border-color: white;
+    color: white;
+}
+
+/* CÍRCULO HERO */
+
+.hero-decoration {
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.hero-decoration::before {
+    content: "";
+    width: 390px;
+    height: 390px;
+
+    position: absolute;
+
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 0 0 45px rgba(255,255,255,.015),
+        0 0 0 90px rgba(255,31,45,.018);
+}
+
+.hero-decoration::after {
+    content: "";
+
+    width: 280px;
+    height: 280px;
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle at 30% 25%, #303034, #121214 60%, #090909);
+
+    box-shadow: 0 45px 80px rgba(0,0,0,.6);
+}
+
+.decoration-text {
+    position: relative;
+    z-index: 2;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 62px;
+    font-weight: 700;
+    line-height: .85;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.decoration-text span {
+    display: block;
+    color: var(--red);
+}
+
+/* TÍTULOS */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 55px;
+}
+
+.section-label {
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(45px, 5vw, 70px);
+}
+
+.section-description {
+    max-width: 380px;
+    color: #77777d;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* CATEGORIAS */
+
+.categories-section {
+    padding: 120px 6%;
+    background: var(--off-white);
+    color: black;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: #d7d7da;
+}
+
+.category-card {
+    min-height: 280px;
+    padding: 30px;
+
+    text-align: left;
+    border: 0;
+
+    background: white;
+    color: black;
+
+    cursor: pointer;
+    transition: .35s;
+}
+
+.category-card > span {
+    display: block;
+    color: var(--red);
+
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+
+    margin-bottom: 110px;
+}
+
+.category-card h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+
+.category-card p {
+    color: #8a8a90;
+    font-size: 12px;
+}
+
+.category-card:hover {
+    background: black;
+    color: white;
+    transform: translateY(-7px);
+}
+
+/* PRODUTOS */
+
+.products-section {
+    padding: 125px 6%;
+    background: var(--black-soft);
+}
+
+.see-all-button {
+    border: 0;
+    background: transparent;
+    color: white;
+
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.see-all-button:hover {
+    color: var(--red);
+}
+
+.products-placeholder {
+    min-height: 420px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid #242428;
+
+    background:
+        radial-gradient(circle at center, rgba(255,31,45,.1), transparent 35%),
+        #101012;
+}
+
+.products-placeholder::before {
+    content: "FIT ZONE";
+
+    position: absolute;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 16vw;
+    font-weight: 700;
+
+    color: rgba(255,255,255,.018);
+    white-space: nowrap;
+}
+
+.placeholder-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.placeholder-content > span {
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.placeholder-content h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(40px,5vw,65px);
+    margin: 10px 0;
+}
+
+.placeholder-content p {
+    color: #77777d;
+}
+
+/* RECOMENDADOR */
+
+.recommendation-banner {
+    min-height: 670px;
+    padding: 110px 8%;
+
+    display: grid;
+    grid-template-columns: .45fr 1fr;
+    align-items: center;
+
+    background: linear-gradient(115deg, #b5000c, #f01825 55%, #ff3440);
+}
+
+.recommendation-number {
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(150px,20vw,330px);
+    font-weight: 700;
+    color: rgba(0,0,0,.13);
+}
+
+.recommendation-content {
+    max-width: 720px;
+}
+
+.recommendation-content > p:first-child {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.recommendation-content h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(55px,6vw,90px);
+    line-height: .95;
+    margin-bottom: 25px;
+}
+
+.recommendation-content h2 span {
+    color: black;
+}
+
+.recommendation-description {
+    max-width: 550px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    color: rgba(255,255,255,.82);
+}
+
+.recommendation-banner .primary-button {
+    background: black;
+}
+
+.recommendation-banner .primary-button:hover {
+    background: white;
+    color: black;
+}
+
+/* CONTA */
+
+.account-banner {
+    min-height: 360px;
+    padding: 80px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    background: var(--graphite);
+}
+
+.account-banner h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(45px,5vw,70px);
+    margin-bottom: 13px;
+}
+
+.account-banner > div > p:last-child {
+    max-width: 530px;
+    color: #8c8c92;
+    line-height: 1.7;
+}
+
+.white-button {
+    background: white;
+    color: black;
+}
+
+.white-button:hover {
+    background: var(--red);
+    color: white;
+}
+
+/* FOOTER */
+
+.store-footer {
+    min-height: 150px;
+    padding: 40px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    background: #050505;
+    border-top: 1px solid #19191c;
+}
+
+.footer-text {
+    color: #4f4f54;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.store-footer p {
+    color: #55555a;
+    font-size: 11px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1100px) {
+    .store-nav {
+        display: none;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-card:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 900px) {
+    .store-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .recommendation-banner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .recommendation-number {
+        display: none;
+    }
+
+    .recommendation-content {
+        margin: auto;
+    }
+
+    .account-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 650px) {
+    .store-header {
+        height: 75px;
+        padding: 0 4%;
+    }
+
+    .store-logo {
+        font-size: 21px;
+    }
+
+    .account-button {
+        display: none;
+    }
+
+    .store-hero {
+        padding: 125px 5% 60px;
+    }
+
+    .store-hero h1 {
+        font-size: 59px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .outline-button {
+        width: 100%;
+    }
+
+    .categories-section,
+    .products-section {
+        padding: 90px 5%;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card:last-child {
+        grid-column: auto;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .recommendation-banner {
+        padding: 90px 6%;
+    }
+
+    .account-banner {
+        padding: 80px 6%;
+    }
+
+    .white-button {
+        width: 100%;
+    }
+
+    .store-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* ENTRADA SUAVE DA LOJA */
+
+body {
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+body.page-loaded {
+    opacity: 1;
+    transform: translateY(0);
+}

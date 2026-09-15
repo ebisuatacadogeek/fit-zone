@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Criar Conta | FIT ZONE</title>
+
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+
+    <main class="auth-page">
+
+        <section class="auth-brand">
+
+            <a href="index.html" class="back-link">
+                ← VOLTAR PARA A LOJA
+            </a>
+
+            <div class="brand-content">
+
+                <div class="logo">
+                    <span>FIT</span> ZONE
+                </div>
+
+                <p class="tag">
+                    FAÇA PARTE DA ZONA
+                </p>
+
+                <h1>
+                    SUA EVOLUÇÃO<br>
+                    <span>COMEÇA AQUI.</span>
+                </h1>
+
+                <p class="description">
+                    Crie sua conta para comprar, acompanhar seus pedidos
+                    e acessar todos os recursos da FIT ZONE.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="auth-form-area">
+
+            <div class="form-container">
+
+                <p class="form-tag">
+                    NOVA CONTA
+                </p>
+
+                <h2>
+                    CRIAR CONTA
+                </h2>
+
+                <p class="form-subtitle">
+                    Preencha seus dados para continuar.
+                </p>
+
+
+                <form id="cadastroForm">
+
+                    <div class="input-group">
+
+                        <label for="nome">
+                            NOME COMPLETO
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Seu nome completo"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="email">
+                            E-MAIL
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="seu@email.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="telefone">
+                            TELEFONE
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="(11) 99999-9999"
+                            autocomplete="tel"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="password-row">
+
+                        <div class="input-group">
+
+                            <label for="senha">
+                                SENHA
+                            </label>
+
+                            <input
+                                type="password"
+                                id="senha"
+                                name="senha"
+                                placeholder="Mínimo 8 caracteres"
+                                minlength="8"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="confirmarSenha">
+                                CONFIRMAR SENHA
+                            </label>
+
+                            <input
+                                type="password"
+                                id="confirmarSenha"
+                                name="confirmarSenha"
+                                placeholder="Repita sua senha"
+                                minlength="8"
+                                autocomplete="new-password"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="termos"
+                            required
+                        >
+
+                        <span>
+                            Li e aceito os Termos de Uso e a Política de Privacidade.
+                        </span>
+
+                    </label>
+
+
+                    <div
+                        id="formMessage"
+                        class="form-message"
+                        aria-live="polite"
+                    ></div>
+
+
+                    <button
+                        type="submit"
+                        class="submit-button"
+                        id="submitButton"
+                    >
+                        CRIAR MINHA CONTA
+                    </button>
+
+                </form>
+
+
+                <div class="login-link">
+
+                    Já possui uma conta?
+
+                    <a href="login.html">
+                        ENTRAR
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+   <script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"
+    defer>
+</script>
+
+<script src="cadastro.js" defer></script>
+
+</body>
+
+</html>
