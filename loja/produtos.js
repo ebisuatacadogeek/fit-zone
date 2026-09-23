@@ -1,25 +1,111 @@
 // ==========================================
-// CONFIGURAÇÃO DE PREÇOS DO WHEY
+// CONFIGURAÇÃO DOS PRODUTOS
 // ==========================================
 
-const precosWhey = {
+const produtos = {
 
-    concentrado: {
-        "900g": 129.90,
-        "1.8kg": 239.90
+    whey: {
+
+        nome: "Whey Protein",
+
+        imagem: "images/whey.png",
+
+        precos: {
+
+            concentrado: {
+                "900g": 129.90,
+                "1.8kg": 239.90
+            },
+
+            isolado: {
+                "900g": 179.90,
+                "1.8kg": 329.90
+            },
+
+            "3w": {
+                "900g": 159.90,
+                "1.8kg": 299.90
+            }
+
+        }
+
     },
 
-    isolado: {
-        "900g": 179.90,
-        "1.8kg": 329.90
+
+    creatina: {
+
+        nome: "Creatina Monohidratada",
+
+        imagem: "images/creatina.png",
+
+        precos: {
+
+            monohidratada: {
+                "150g": 59.90,
+                "300g": 89.90,
+                "500g": 129.90
+            }
+
+        }
+
     },
 
-    "3w": {
-        "900g": 159.90,
-        "1.8kg": 299.90
+
+    pretreino: {
+
+        nome: "Pré-Treino",
+
+        imagem: "images/pretreino.png",
+
+        precos: {
+
+            tradicional: {
+                "150g": 79.90,
+                "300g": 129.90
+            }
+
+        }
+
+    },
+
+
+    barras: {
+
+        nome: "Barras Proteicas",
+
+        imagem: "images/barras.png",
+
+        precos: {
+
+            proteica: {
+                "12un": 89.90,
+                "24un": 169.90
+            }
+
+        }
+
     }
 
 };
+
+// ==========================================
+// IDENTIFICAR PRODUTO
+// ==========================================
+
+let produtoAtual =
+    document.body.dataset.product;
+
+
+// Compatibilidade com o whey.html atual
+if (!produtoAtual) {
+
+    produtoAtual = "whey";
+
+}
+
+
+const configuracaoProduto =
+    produtos[produtoAtual];
 
 
 // ==========================================
@@ -74,33 +160,50 @@ function formatarPreco(valor) {
 
 
 // ==========================================
-// DESCOBRIR PREÇO UNITÁRIO
+// TIPO SELECIONADO
 // ==========================================
 
-function obterPrecoUnitario() {
+function obterTipoSelecionado() {
 
-    const tipoSelecionado =
+    const selecionado =
         document.querySelector(
             ".option-button.active"
         );
 
-    if (!tipoSelecionado || !sizeSelect) {
-        return 0;
-    }
-
-    const tipo =
-        tipoSelecionado.dataset.type;
-
-    const tamanho =
-        sizeSelect.value;
-
-    return precosWhey[tipo]?.[tamanho] || 0;
+    return selecionado
+        ? selecionado.dataset.type
+        : "";
 
 }
 
 
 // ==========================================
-// ATUALIZAR PREÇO NA TELA
+// PREÇO UNITÁRIO
+// ==========================================
+
+function obterPrecoUnitario() {
+
+    if (!configuracaoProduto) {
+        return 0;
+    }
+
+    const tipo =
+        obterTipoSelecionado();
+
+    const tamanho =
+        sizeSelect?.value || "";
+
+    return (
+        configuracaoProduto
+            .precos?.[tipo]?.[tamanho]
+        || 0
+    );
+
+}
+
+
+// ==========================================
+// ATUALIZAR PREÇO
 // ==========================================
 
 function atualizarPreco() {
@@ -122,7 +225,7 @@ function atualizarPreco() {
 
 
 // ==========================================
-// AUMENTAR QUANTIDADE
+// QUANTIDADE
 // ==========================================
 
 if (increaseButton) {
@@ -143,10 +246,6 @@ if (increaseButton) {
 
 }
 
-
-// ==========================================
-// DIMINUIR QUANTIDADE
-// ==========================================
 
 if (decreaseButton) {
 
@@ -179,11 +278,9 @@ typeButtons.forEach(button => {
         "click",
         () => {
 
-            typeButtons.forEach(item => {
-
-                item.classList.remove("active");
-
-            });
+            typeButtons.forEach(item =>
+                item.classList.remove("active")
+            );
 
             button.classList.add("active");
 
@@ -196,7 +293,7 @@ typeButtons.forEach(button => {
 
 
 // ==========================================
-// TROCAR PESO
+// TROCAR TAMANHO
 // ==========================================
 
 if (sizeSelect) {
@@ -219,15 +316,12 @@ if (cartButton) {
         "click",
         () => {
 
-            const tipoSelecionado =
-                document.querySelector(
-                    ".option-button.active"
-                );
+            if (!configuracaoProduto) {
+                return;
+            }
 
             const tipo =
-                tipoSelecionado
-                    ? tipoSelecionado.dataset.type
-                    : "";
+                obterTipoSelecionado();
 
             const sabor =
                 flavorSelect?.value || "";
@@ -242,10 +336,10 @@ if (cartButton) {
             const item = {
 
                 id:
-                    `whey-${tipo}-${sabor}-${tamanho}`,
+                    `${produtoAtual}-${tipo}-${sabor}-${tamanho}`,
 
                 produto:
-                    "Whey Protein",
+                    configuracaoProduto.nome,
 
                 tipo:
                     tipo,
@@ -263,7 +357,7 @@ if (cartButton) {
                     precoUnitario,
 
                 imagem:
-                    "images/whey.png"
+                    configuracaoProduto.imagem
 
             };
 
@@ -315,37 +409,6 @@ function adicionarAoCarrinho(novoItem) {
         JSON.stringify(carrinho)
     );
 
-
-    atualizarContadorCarrinho();
-
-}
-
-
-// ==========================================
-// CONTADOR DO CARRINHO
-// ==========================================
-
-function atualizarContadorCarrinho() {
-
-    const carrinho =
-        JSON.parse(
-            localStorage.getItem("fitZoneCart")
-        ) || [];
-
-
-    const quantidadeTotal =
-        carrinho.reduce(
-            (total, item) =>
-                total + item.quantidade,
-            0
-        );
-
-
-    localStorage.setItem(
-        "fitZoneCartCount",
-        quantidadeTotal
-    );
-
 }
 
 
@@ -354,4 +417,3 @@ function atualizarContadorCarrinho() {
 // ==========================================
 
 atualizarPreco();
-atualizarContadorCarrinho();

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Barras Proteicas | FIT ZONE</title>
+<link rel="icon" type="image/png" href="../favicon-fit.png">
+    <link rel="stylesheet" href="produtos.css">
+</head>
+
+<body data-product="barras">
+
+<header class="product-header">
+
+    <a href="index.html" class="product-logo">
+        <span>FIT</span> ZONE
+    </a>
+
+    <nav>
+        <a href="index.html">INÍCIO</a>
+        <a href="index.html#produtos">PRODUTOS</a>
+        <a href="index.html#categorias">CATEGORIAS</a>
+    </nav>
+
+    <a href="carrinho.html" class="back-store">
+        CARRINHO →
+    </a>
+
+</header>
+
+
+<main class="product-page">
+
+    <div class="breadcrumb">
+        FIT ZONE / NUTRIÇÃO / BARRAS PROTEICAS
+    </div>
+
+
+    <section class="product-layout">
+
+        <!-- IMAGEM -->
+
+        <div class="product-visual">
+
+            <span class="visual-label">
+                BARRAS PROTEICAS
+            </span>
+
+            <img
+                id="productImage"
+                src="images/barras.png"
+                alt="Barras Proteicas"
+            >
+
+            <div class="visual-background">
+                PROTEIN
+            </div>
+
+        </div>
+
+
+        <!-- INFORMAÇÕES -->
+
+        <div class="product-details">
+
+            <p class="product-category">
+                NUTRIÇÃO
+            </p>
+
+            <h1>BARRAS<br>PROTEICAS</h1>
+
+            <p class="product-description">
+                Escolha o sabor, a quantidade por caixa e quantas caixas deseja.
+            </p>
+
+
+            <!-- TIPO -->
+
+            <div class="option-group">
+
+                <label>TIPO</label>
+
+                <div class="option-buttons">
+
+                    <button
+                        class="option-button active"
+                        data-type="proteica">
+
+                        PROTEICA
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SABOR -->
+
+            <div class="option-group">
+
+                <label for="flavor">
+                    SABOR
+                </label>
+
+                <select id="flavor">
+
+                    <option value="chocolate">
+                        Chocolate
+                    </option>
+
+                    <option value="cookies">
+                        Cookies & Cream
+                    </option>
+
+                    <option value="morango">
+                        Morango
+                    </option>
+
+                    <option value="caramelo">
+                        Caramelo
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- CAIXA -->
+
+            <div class="option-group">
+
+                <label for="size">
+                    CAIXA
+                </label>
+
+                <select id="size">
+
+                    <option value="12un">
+                        Caixa com 12 unidades
+                    </option>
+
+                    <option value="24un">
+                        Caixa com 24 unidades
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- QUANTIDADE -->
+
+            <div class="option-group">
+
+                <label>
+                    QUANTIDADE DE CAIXAS
+                </label>
+
+                <div class="quantity-control">
+
+                    <button id="decreaseQuantity">
+                        −
+                    </button>
+
+                    <span id="quantity">
+                        1
+                    </span>
+
+                    <button id="increaseQuantity">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PREÇO -->
+
+            <div class="price-area">
+
+                <span>
+                    PREÇO
+                </span>
+
+                <strong id="productPrice">
+                    R$ 89,90
+                </strong>
+
+            </div>
+
+
+            <button
+                class="add-cart-button"
+                id="addToCart">
+
+                ADICIONAR AO CARRINHO →
+
+            </button>
+
+
+            <div
+                id="cartMessage"
+                class="cart-message">
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="produtos.js"></script>
+
+</body>
+</html>

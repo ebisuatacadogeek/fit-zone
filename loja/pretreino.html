@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pré-Treino | FIT ZONE</title>
+<link rel="icon" type="image/png" href="../favicon-fit.png">
+    <link rel="stylesheet" href="produtos.css">
+</head>
+
+<body data-product="pretreino">
+
+<header class="product-header">
+
+    <a href="index.html" class="product-logo">
+        <span>FIT</span> ZONE
+    </a>
+
+    <nav>
+        <a href="index.html">INÍCIO</a>
+        <a href="index.html#produtos">PRODUTOS</a>
+        <a href="index.html#categorias">CATEGORIAS</a>
+    </nav>
+
+    <a href="carrinho.html" class="back-store">
+        CARRINHO →
+    </a>
+
+</header>
+
+
+<main class="product-page">
+
+    <div class="breadcrumb">
+        FIT ZONE / ENERGIA / PRÉ-TREINO
+    </div>
+
+
+    <section class="product-layout">
+
+        <!-- IMAGEM -->
+
+        <div class="product-visual">
+
+            <span class="visual-label">
+                PRÉ-TREINO
+            </span>
+
+            <img
+                id="productImage"
+                src="images/pretreino.png"
+                alt="Pré-Treino"
+            >
+
+            <div class="visual-background">
+                ENERGY
+            </div>
+
+        </div>
+
+
+        <!-- INFORMAÇÕES -->
+
+        <div class="product-details">
+
+            <p class="product-category">
+                ENERGIA
+            </p>
+
+            <h1>PRÉ-<br>TREINO</h1>
+
+            <p class="product-description">
+                Escolha o sabor, tamanho e quantidade desejada.
+            </p>
+
+
+            <!-- TIPO -->
+
+            <div class="option-group">
+
+                <label>TIPO</label>
+
+                <div class="option-buttons" id="typeOptions">
+
+                    <button
+                        class="option-button active"
+                        data-type="tradicional">
+
+                        TRADICIONAL
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SABOR -->
+
+            <div class="option-group">
+
+                <label for="flavor">
+                    SABOR
+                </label>
+
+                <select id="flavor">
+
+                    <option value="frutas-vermelhas">
+                        Frutas Vermelhas
+                    </option>
+
+                    <option value="limao">
+                        Limão
+                    </option>
+
+                    <option value="melancia">
+                        Melancia
+                    </option>
+
+                    <option value="uva">
+                        Uva
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- TAMANHO -->
+
+            <div class="option-group">
+
+                <label for="size">
+                    TAMANHO
+                </label>
+
+                <select id="size">
+
+                    <option value="150g">
+                        150g
+                    </option>
+
+                    <option value="300g">
+                        300g
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- QUANTIDADE -->
+
+            <div class="option-group">
+
+                <label>
+                    QUANTIDADE
+                </label>
+
+                <div class="quantity-control">
+
+                    <button id="decreaseQuantity">
+                        −
+                    </button>
+
+                    <span id="quantity">
+                        1
+                    </span>
+
+                    <button id="increaseQuantity">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PREÇO -->
+
+            <div class="price-area">
+
+                <span>
+                    PREÇO
+                </span>
+
+                <strong id="productPrice">
+                    R$ 79,90
+                </strong>
+
+            </div>
+
+
+            <!-- CARRINHO -->
+
+            <button
+                class="add-cart-button"
+                id="addToCart">
+
+                ADICIONAR AO CARRINHO →
+
+            </button>
+
+            <div
+                id="cartMessage"
+                class="cart-message">
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="produtos.js"></script>
+
+</body>
+</html>

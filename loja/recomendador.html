@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recomendador | FIT ZONE</title>
+<link rel="icon" type="image/png" href="../favicon-fit.png">
+    <link rel="stylesheet" href="recomendador.css">
+</head>
+
+<body>
+
+<header class="recommend-header">
+
+    <a href="index.html" class="logo">
+        <span>FIT</span> ZONE
+    </a>
+
+    <a href="index.html" class="back-button">
+        ← VOLTAR À LOJA
+    </a>
+
+</header>
+
+
+<main class="recommend-page">
+
+    <!-- INTRO -->
+
+    <section class="recommend-intro">
+
+        <span class="eyebrow">
+            FIT ZONE / RECOMENDADOR
+        </span>
+
+        <h1>
+            ENCONTRE O<br>
+            <strong>SUPLEMENTO CERTO</strong>
+        </h1>
+
+        <p>
+            Responda algumas perguntas e veja quais categorias
+            de produtos combinam melhor com seus objetivos.
+        </p>
+
+    </section>
+
+
+    <!-- QUESTIONÁRIO -->
+
+    <section class="quiz-card" id="quizCard">
+
+        <!-- ETAPA 1 -->
+
+        <div class="quiz-step active" data-step="1">
+
+            <div class="step-number">
+                01 / 03
+            </div>
+
+            <h2>
+                QUAL É O SEU OBJETIVO?
+            </h2>
+
+            <div class="answer-grid">
+
+                <button
+                    class="answer-button"
+                    data-question="objetivo"
+                    data-value="massa">
+
+                    <strong>GANHAR MASSA</strong>
+                    <span>Hipertrofia e suporte nutricional</span>
+
+                </button>
+
+
+                <button
+                    class="answer-button"
+                    data-question="objetivo"
+                    data-value="performance">
+
+                    <strong>PERFORMANCE</strong>
+                    <span>Força e desempenho nos treinos</span>
+
+                </button>
+
+
+                <button
+                    class="answer-button"
+                    data-question="objetivo"
+                    data-value="praticidade">
+
+                    <strong>PRATICIDADE</strong>
+                    <span>Complementar proteína na rotina</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ETAPA 2 -->
+
+        <div class="quiz-step" data-step="2">
+
+            <div class="step-number">
+                02 / 03
+            </div>
+
+            <h2>
+                COMO É SUA ROTINA DE TREINO?
+            </h2>
+
+            <div class="answer-grid">
+
+                <button
+                    class="answer-button"
+                    data-question="treino"
+                    data-value="iniciante">
+
+                    <strong>ESTOU COMEÇANDO</strong>
+                    <span>Treino há pouco tempo</span>
+
+                </button>
+
+
+                <button
+                    class="answer-button"
+                    data-question="treino"
+                    data-value="regular">
+
+                    <strong>TREINO REGULARMENTE</strong>
+                    <span>Tenho uma rotina consistente</span>
+
+                </button>
+
+
+                <button
+                    class="answer-button"
+                    data-question="treino"
+                    data-value="intenso">
+
+                    <strong>TREINO INTENSO</strong>
+                    <span>Alta frequência ou intensidade</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ETAPA 3 -->
+
+        <div class="quiz-step" data-step="3">
+
+            <div class="step-number">
+                03 / 03
+            </div>
+
+            <h2>
+                O QUE VOCÊ PROCURA?
+            </h2>
+
+            <div class="answer-grid">
+
+                <button
+                    class="answer-button"
+                    data-question="preferencia"
+                    data-value="proteina">
+
+                    <strong>PROTEÍNA</strong>
+                    <span>Complementar minha alimentação</span>
+
+                </button>
+
+
+                <button
+                    class="answer-button"
+                    data-question="preferencia"
+                    data-value="forca">
+
+                    <strong>FORÇA E DESEMPENHO</strong>
+                    <span>Suporte para meus treinos</span>
+
+                </button>
+
+
+                <button
+                    class="answer-button"
+                    data-question="preferencia"
+                    data-value="energia">
+
+                    <strong>ENERGIA PARA TREINAR</strong>
+                    <span>Quero mais disposição para o treino</span>
+
+                </button>
+
+
+                <button
+                    class="answer-button"
+                    data-question="preferencia"
+                    data-value="lanche">
+
+                    <strong>LANCHE PRÁTICO</strong>
+                    <span>Proteína de forma conveniente</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESULTADO -->
+
+        <div class="quiz-result" id="quizResult">
+
+            <span class="result-label">
+                RECOMENDAÇÃO FIT ZONE
+            </span>
+
+            <p class="result-small">
+                PARA O SEU OBJETIVO
+            </p>
+
+            <h2 id="resultTitle">
+                WHEY PROTEIN
+            </h2>
+
+            <p id="resultDescription">
+            </p>
+
+            <a
+                href="#"
+                id="resultLink"
+                class="result-button">
+
+                VER PRODUTO →
+
+            </a>
+
+            <button
+                id="restartQuiz"
+                class="restart-button">
+
+                REFAZER TESTE
+
+            </button>
+
+            <small class="recommend-disclaimer">
+                As sugestões são gerais e não substituem orientação
+                individualizada de nutricionista ou outro profissional
+                de saúde qualificado.
+            </small>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="recomendador.js"></script>
+
+</body>
+</html>

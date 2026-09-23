@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap');
+
+:root {
+    --red: #ff1f2d;
+    --black: #08080a;
+    --dark: #0d0d0f;
+    --border: #26262a;
+    --white: #ffffff;
+    --gray: #77777f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(255,31,45,.08),
+            transparent 35%
+        ),
+        var(--black);
+
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* HEADER */
+
+.recommend-header {
+    height: 90px;
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #1d1d20;
+}
+
+.logo {
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.back-button {
+    padding: 13px 18px;
+
+    border: 1px solid var(--border);
+
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+
+    transition: .25s;
+}
+
+.back-button:hover {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+
+/* PÁGINA */
+
+.recommend-page {
+    width: min(1200px, 88%);
+    margin: auto;
+    padding: 70px 0 100px;
+}
+
+
+/* INTRO */
+
+.recommend-intro {
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 20px;
+
+    color: var(--red);
+
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.recommend-intro h1 {
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(55px, 7vw, 95px);
+    line-height: .9;
+
+    letter-spacing: -2px;
+}
+
+.recommend-intro h1 strong {
+    color: var(--red);
+}
+
+.recommend-intro p {
+    max-width: 580px;
+
+    margin-top: 25px;
+
+    color: var(--gray);
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* QUIZ */
+
+.quiz-card {
+    padding: 50px;
+
+    background: #0c0c0f;
+    border: 1px solid var(--border);
+}
+
+.quiz-step {
+    display: none;
+}
+
+.quiz-step.active {
+    display: block;
+}
+
+.step-number {
+    margin-bottom: 15px;
+
+    color: var(--red);
+
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.quiz-step h2 {
+    margin-bottom: 30px;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 38px;
+}
+
+.answer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.answer-button {
+    min-height: 110px;
+    padding: 25px;
+
+    background: #111114;
+    border: 1px solid #29292e;
+
+    color: white;
+
+    text-align: left;
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.answer-button:hover {
+    border-color: var(--red);
+    transform: translateY(-2px);
+
+    background: rgba(255,31,45,.05);
+}
+
+.answer-button strong {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 19px;
+}
+
+.answer-button span {
+    color: #6f6f77;
+
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+}
+
+
+/* RESULTADO */
+
+.quiz-result {
+    display: none;
+    text-align: center;
+
+    padding: 35px 10px;
+}
+
+.quiz-result.active {
+    display: block;
+}
+
+.result-label {
+    display: block;
+
+    margin-bottom: 30px;
+
+    color: var(--red);
+
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.result-small {
+    color: #666;
+
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.quiz-result h2 {
+    margin: 10px 0 20px;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(55px, 8vw, 100px);
+}
+
+#resultDescription {
+    max-width: 580px;
+
+    margin: 0 auto 30px;
+
+    color: #85858c;
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.result-button {
+    display: inline-flex;
+
+    min-width: 220px;
+    height: 55px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--red);
+
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.restart-button {
+    display: block;
+
+    margin: 20px auto 0;
+
+    border: none;
+    background: transparent;
+
+    color: #666;
+
+    cursor: pointer;
+
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.restart-button:hover {
+    color: white;
+}
+
+.recommend-disclaimer {
+    display: block;
+
+    max-width: 550px;
+
+    margin: 35px auto 0;
+
+    color: #4f4f55;
+
+    font-size: 8px;
+    line-height: 1.6;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .recommend-page {
+        width: 92%;
+        padding-top: 45px;
+    }
+
+    .quiz-card {
+        padding: 30px 20px;
+    }
+
+    .answer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recommend-intro h1 {
+        font-size: 52px;
+    }
+
+}
