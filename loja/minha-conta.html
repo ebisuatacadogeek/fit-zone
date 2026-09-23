@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minha Conta | FIT ZONE</title>
+
+    <link rel="stylesheet" href="minha-conta.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        <span>FIT</span> ZONE
+    </a>
+
+    <a href="index.html" class="back-button">
+        VOLTAR PARA A LOJA
+    </a>
+
+</header>
+
+
+<main class="account-page">
+
+    <section class="account-header">
+
+        <p class="tag">ÁREA DO CLIENTE</p>
+
+        <h1>
+            MINHA <span>CONTA.</span>
+        </h1>
+
+        <p id="welcomeMessage">
+            Carregando seus dados...
+        </p>
+
+    </section>
+
+
+    <section class="account-grid">
+
+        <div class="account-card">
+
+            <p class="card-tag">
+                PERFIL
+            </p>
+
+            <h2>MEUS DADOS</h2>
+
+            <div class="user-data">
+
+                <div class="data-item">
+                    <span>NOME</span>
+                    <strong id="userName">—</strong>
+                </div>
+
+                <div class="data-item">
+                    <span>E-MAIL</span>
+                    <strong id="userEmail">—</strong>
+                </div>
+
+                <div class="data-item">
+                    <span>TELEFONE</span>
+                    <strong id="userPhone">—</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="account-card">
+
+            <p class="card-tag">
+                COMPRAS
+            </p>
+
+            <h2>MEUS PEDIDOS</h2>
+
+            <div class="empty-orders">
+
+                <strong>NENHUM PEDIDO AINDA</strong>
+
+                <p>
+                    Seus pedidos aparecerão aqui depois
+                    que realizarmos o sistema de compras.
+                </p>
+
+                <a href="index.html">
+                    VER PRODUTOS
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="account-actions">
+
+        <button id="logoutButton">
+            SAIR DA CONTA
+        </button>
+
+    </section>
+
+</main>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"
+    defer>
+</script>
+
+<script src="minha-conta.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap');
+
+:root {
+    --red: #ff1f2d;
+    --black: #060606;
+    --dark: #101012;
+    --white: #ffffff;
+    --gray: #8b8b92;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "Inter", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 30%,
+            rgba(255,31,45,.12),
+            transparent 30%
+        ),
+        #060606;
+
+    color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER */
+
+.header {
+    height: 90px;
+
+    padding: 0 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #1c1c1f;
+}
+
+.logo {
+    font-family: "Oswald", sans-serif;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.back-button {
+    padding: 14px 20px;
+
+    border: 1px solid #29292d;
+
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+
+    transition: .25s;
+}
+
+.back-button:hover {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+/* CONTEÚDO */
+
+.account-page {
+    width: min(1200px, 88%);
+
+    margin: auto;
+
+    padding: 90px 0;
+}
+
+.account-header {
+    margin-bottom: 60px;
+}
+
+.tag,
+.card-tag {
+    color: var(--red);
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 14px;
+}
+
+.account-header h1 {
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(55px, 7vw, 95px);
+
+    line-height: 1;
+
+    margin-bottom: 18px;
+}
+
+.account-header h1 span {
+    color: var(--red);
+}
+
+#welcomeMessage {
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+/* CARDS */
+
+.account-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.account-card {
+    min-height: 360px;
+
+    padding: 40px;
+
+    background: #0d0d0f;
+
+    border: 1px solid #202024;
+}
+
+.account-card h2 {
+    font-family: "Oswald", sans-serif;
+
+    font-size: 34px;
+
+    margin-bottom: 35px;
+}
+
+/* DADOS */
+
+.data-item {
+    padding: 20px 0;
+
+    border-bottom: 1px solid #202024;
+}
+
+.data-item span {
+    display: block;
+
+    color: #666;
+
+    font-size: 8px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+}
+
+.data-item strong {
+    font-size: 13px;
+}
+
+/* PEDIDOS */
+
+.empty-orders {
+    padding-top: 20px;
+}
+
+.empty-orders strong {
+    display: block;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.empty-orders p {
+    max-width: 400px;
+
+    color: var(--gray);
+
+    font-size: 12px;
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.empty-orders a {
+    display: inline-block;
+
+    padding: 15px 22px;
+
+    background: var(--red);
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+/* LOGOUT */
+
+.account-actions {
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+#logoutButton {
+    padding: 16px 28px;
+
+    background: transparent;
+
+    border: 1px solid #3a3a3e;
+
+    color: #999;
+
+    cursor: pointer;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    transition: .25s;
+}
+
+#logoutButton:hover {
+    color: white;
+    border-color: var(--red);
+    background: var(--red);
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .account-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .account-page {
+        padding: 60px 0;
+    }
+
+    .account-card {
+        padding: 30px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .back-button {
+        padding: 11px 12px;
+    }
+
+    .account-header h1 {
+        font-size: 55px;
+    }
+
+}
