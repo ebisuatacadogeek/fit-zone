@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrinho | FIT ZONE</title>
+
+    <link rel="stylesheet" href="produtos.css">
+</head>
+
+<body>
+
+<header class="product-header">
+
+    <a href="index.html" class="product-logo">
+        <span>FIT</span> ZONE
+    </a>
+
+    <nav>
+        <a href="index.html">INÍCIO</a>
+        <a href="index.html#produtos">PRODUTOS</a>
+        <a href="index.html#categorias">CATEGORIAS</a>
+    </nav>
+
+    <a href="index.html" class="back-store">
+        ← CONTINUAR COMPRANDO
+    </a>
+
+</header>
+
+
+<main class="cart-page">
+
+    <div class="breadcrumb">
+        FIT ZONE / CARRINHO
+    </div>
+
+    <div class="cart-title">
+
+        <div>
+            <p>SEU PEDIDO</p>
+            <h1>CARRINHO</h1>
+        </div>
+
+        <span id="cartPageCount">
+            0 ITENS
+        </span>
+
+    </div>
+
+
+    <div class="cart-layout">
+
+        <!-- PRODUTOS -->
+
+        <section
+            class="cart-products"
+            id="cartProducts">
+        </section>
+
+
+        <!-- RESUMO -->
+
+        <aside class="cart-summary">
+
+            <p class="summary-label">
+                RESUMO DO PEDIDO
+            </p>
+
+            <div class="summary-line">
+
+                <span>Subtotal</span>
+
+                <strong id="cartSubtotal">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+            <div class="summary-line">
+
+                <span>Entrega</span>
+
+                <strong>
+                    Calculada depois
+                </strong>
+
+            </div>
+
+            <div class="summary-total">
+
+                <span>TOTAL</span>
+
+                <strong id="cartTotal">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+            <button
+                class="checkout-button"
+                id="checkoutButton">
+
+                FINALIZAR COMPRA →
+
+            </button>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<script src="carrinho.js"></script>
+
+</body>
+</html>

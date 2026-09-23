@@ -130,3 +130,78 @@ supabaseClient.auth.onAuthStateChange(
 
     }
 );
+
+// ==========================================
+// CONTADOR VISUAL DO CARRINHO
+// ==========================================
+
+function atualizarCarrinhoHeader() {
+
+    const carrinho =
+        JSON.parse(
+            localStorage.getItem("fitZoneCart")
+        ) || [];
+
+    const quantidadeTotal =
+        carrinho.reduce(
+            (total, item) =>
+                total + Number(item.quantidade || 0),
+            0
+        );
+
+    const cartCount =
+        document.querySelector(".cart-count");
+
+    if (cartCount) {
+
+        cartCount.textContent =
+            `${quantidadeTotal} ${
+                quantidadeTotal === 1
+                    ? "ITEM"
+                    : "ITENS"
+            }`;
+
+    }
+
+}
+
+
+// Atualiza quando a loja abrir
+window.addEventListener(
+    "DOMContentLoaded",
+    atualizarCarrinhoHeader
+);
+
+// ==========================================
+// CONTADOR DO CARRINHO
+// ==========================================
+
+function atualizarCarrinhoHeader() {
+
+    const carrinho =
+        JSON.parse(localStorage.getItem("fitZoneCart")) || [];
+
+    const quantidadeTotal =
+        carrinho.reduce(
+            (total, item) =>
+                total + Number(item.quantidade || 0),
+            0
+        );
+
+    const cartCount =
+        document.getElementById("cartCount");
+
+    if (cartCount) {
+        cartCount.textContent = quantidadeTotal;
+    }
+}
+
+
+// Atualiza assim que a página carregar
+atualizarCarrinhoHeader();
+
+
+// Atualiza quando voltar para a página
+window.addEventListener("pageshow", () => {
+    atualizarCarrinhoHeader();
+});

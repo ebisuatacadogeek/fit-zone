@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Whey Protein | FIT ZONE</title>
+
+    <link rel="stylesheet" href="produtos.css">
+</head>
+
+<body>
+
+<header class="product-header">
+
+    <a href="index.html" class="product-logo">
+        <span>FIT</span> ZONE
+    </a>
+
+    <nav>
+        <a href="index.html">INÍCIO</a>
+        <a href="index.html#produtos">PRODUTOS</a>
+        <a href="index.html#categorias">CATEGORIAS</a>
+    </nav>
+
+    <a href="index.html" class="back-store">
+        ← VOLTAR À LOJA
+    </a>
+
+</header>
+
+
+<main class="product-page">
+
+    <div class="breadcrumb">
+        FIT ZONE / PROTEÍNAS / WHEY PROTEIN
+    </div>
+
+
+    <section class="product-layout">
+
+        <!-- IMAGEM -->
+
+        <div class="product-visual">
+
+            <span class="visual-label">
+                WHEY PROTEIN
+            </span>
+
+            <img
+                id="productImage"
+                src="images/whey.png"
+                alt="Whey Protein"
+            >
+
+            <div class="visual-background">
+                WHEY
+            </div>
+
+        </div>
+
+
+        <!-- INFORMAÇÕES -->
+
+        <div class="product-details">
+
+            <p class="product-category">
+                PROTEÍNAS
+            </p>
+
+            <h1>WHEY<br>PROTEIN</h1>
+
+            <p class="product-description">
+                Escolha a opção ideal para sua rotina e objetivo.
+            </p>
+
+
+            <!-- TIPO -->
+
+            <div class="option-group">
+
+                <label>TIPO</label>
+
+                <div class="option-buttons" id="typeOptions">
+
+                    <button
+                        class="option-button active"
+                        data-type="concentrado">
+                        CONCENTRADO
+                    </button>
+
+                    <button
+                        class="option-button"
+                        data-type="isolado">
+                        ISOLADO
+                    </button>
+
+                    <button
+                        class="option-button"
+                        data-type="3w">
+                        3W
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SABOR -->
+
+            <div class="option-group">
+
+                <label for="flavor">
+                    SABOR
+                </label>
+
+                <select id="flavor">
+
+                    <option value="chocolate">
+                        Chocolate
+                    </option>
+
+                    <option value="baunilha">
+                        Baunilha
+                    </option>
+
+                    <option value="morango">
+                        Morango
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- TAMANHO -->
+
+            <div class="option-group">
+
+                <label for="size">
+                    TAMANHO
+                </label>
+
+                <select id="size">
+
+                    <option value="900g">
+                        900g
+                    </option>
+
+                    <option value="1.8kg">
+                        1,8kg
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- QUANTIDADE -->
+
+            <div class="option-group">
+
+                <label>QUANTIDADE</label>
+
+                <div class="quantity-control">
+
+                    <button id="decreaseQuantity">
+                        −
+                    </button>
+
+                    <span id="quantity">
+                        1
+                    </span>
+
+                    <button id="increaseQuantity">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PREÇO -->
+
+            <div class="price-area">
+
+                <span>A PARTIR DE</span>
+
+                <strong id="productPrice" data-unit-price="129.90">
+    R$ 129,90
+</strong>
+
+<small id="unitPrice">
+    R$ 129,90 por unidade
+</small>
+
+            </div>
+
+
+            <button
+                class="add-cart-button"
+                id="addToCart">
+
+                ADICIONAR AO CARRINHO →
+
+            </button>
+
+
+            <div
+                id="cartMessage"
+                class="cart-message">
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="produtos.js"></script>
+
+</body>
+</html>
