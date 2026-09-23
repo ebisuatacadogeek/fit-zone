@@ -705,3 +705,134 @@ body.page-loaded {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ==========================================
+   PRODUTOS EM DESTAQUE
+========================================== */
+
+.featured-products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.featured-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    min-height: 500px;
+
+    background: #0d0d0f;
+    border: 1px solid #242428;
+
+    color: #fff;
+    text-decoration: none;
+
+    transition: transform .35s ease, border-color .35s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-6px);
+    border-color: #ff1f2d;
+}
+
+/* IMAGEM */
+
+.featured-image {
+    height: 370px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 31, 45, .12),
+            transparent 55%
+        );
+}
+
+.featured-image img {
+    width: 88%;
+    height: 88%;
+
+    object-fit: contain;
+
+    transition: transform .45s ease;
+}
+
+.featured-card:hover .featured-image img {
+    transform: scale(1.07);
+}
+
+/* INFORMAÇÕES */
+
+.featured-info {
+    padding: 25px 25px 28px;
+}
+
+.featured-info span {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #ff1f2d;
+
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.featured-info h3 {
+    margin: 0 0 18px;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 27px;
+    line-height: 1;
+}
+
+.featured-info p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+
+    transition: color .25s ease;
+}
+
+.featured-card:hover .featured-info p {
+    color: #fff;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+
+    .featured-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .featured-products {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-card {
+        min-height: 430px;
+    }
+
+    .featured-image {
+        height: 310px;
+    }
+
+}
